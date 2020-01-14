@@ -42,12 +42,12 @@ public class Gyroscope extends AppCompatActivity {
 
                         if (event.values[1] < 0) {
                             Action( "add" );
-                            Toast.makeText( Gyroscope.this, "add", Toast.LENGTH_SHORT ).show();
+                            //Toast.makeText( Gyroscope.this, "add", Toast.LENGTH_SHORT ).show();
 
 
                         } else if (event.values[1] > 0) {
                             Action( "sub" );
-                            Toast.makeText( Gyroscope.this, "sub", Toast.LENGTH_SHORT ).show();
+                           // Toast.makeText( Gyroscope.this, "sub", Toast.LENGTH_SHORT ).show();
                         }
                     }
 
@@ -61,7 +61,8 @@ public class Gyroscope extends AppCompatActivity {
                     sensorManager.registerListener( gyo, sensor, sensorManager.SENSOR_DELAY_NORMAL );
 
                 } else {
-                    Toast.makeText( Gyroscope.this, "no Sensor found", Toast.LENGTH_SHORT ).show();
+                    textView.setText( "no Sensor found ");
+                   // Toast.makeText( Gyroscope.this, "no Sensor found", Toast.LENGTH_SHORT ).show();
                 }
             }
 
